@@ -76,7 +76,17 @@ $(document).ready(function () {
         }
     }
     function setColor() {
+        //save button, adding the value of the buttton to local storage.
+        $(".saveBtn").on("click", function () {
 
+            var btnText = ($(this).siblings("textarea").val());
+            console.log(btnText);
+            var horaTest = $(this).val();
+            console.log(horaTest);
+            storedDay[horaTest - 9] = btnText;
+            localStorage.setItem("day", JSON.stringify(storedDay));
+
+        });
 
 
 
