@@ -75,6 +75,11 @@ $(document).ready(function () {
 
         }
     }
+    function setColor() {
 
+
+
+
+    }
 
 });
