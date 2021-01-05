@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
     // get date with moment js and displaying the date on page
-    $("#currentDay").text(moment().format("MMMM Do YYYY"));
+    $("#currentDay").text(moment().format("MMMM Da YYYY"));
     var currentHour = parseInt(moment().format('HH'));
     //global variables
     var varTime = " AM";
-    var textTime = 8;
-    var realTime = 8;
+    var txtTime = 8;
+    var liveTime = 8;
     var day;
     var storedDay = [];
 
@@ -44,33 +44,33 @@ $(document).ready(function () {
 
         for (i = 0; i < 9; i++) {
 
-            textTime++;
-            realTime++;
+            ++;
+            liveTime++;
 
             if (i >= 3) varTime = " PM";
-            if (i === 4) textTime = 1;
+            if (i === 4)  = 1;
             //creating the elements and giving them class and attr
             var divRow = $("<div>");
             divRow.addClass("row time-block");
-            divRow.attr("id", "hour-" + realTime);
+            divRow.attr("id", "hour-" + liveTime);
             var divHour = $("<div>");
             divHour.addClass("col-md-1 hour p-1");
-            divHour.text(textTime + varTime);
+            divHour.text(+ varTime);
             var textHour = $("<textarea>");
-            textHour.attr("value", realTime);
+            textHour.attr("value", liveTime);
             textHour.addClass("col-md-10 description");
             textHour.text(storedDay[i]);
             var btnHour = $("<button>");
             btnHour.addClass("btn saveBtn col-md-1");
-            btnHour.attr("value", realTime);
+            btnHour.attr("value", liveTime);
             var btnIcon = $("<i>");
             btnIcon.addClass("fas fa-save");
 
             //adding the elements to the page
             $(divRow).appendTo(".container");
-            $(divHour).appendTo("#hour-" + realTime);
-            $(textHour).appendTo("#hour-" + realTime);
-            $(btnHour).appendTo("#hour-" + realTime);
+            $(divHour).appendTo("#hour-" + liveTime);
+            $(textHour).appendTo("#hour-" + liveTime);
+            $(btnHour).appendTo("#hour-" + liveTime);
             $(btnIcon).appendTo(btnHour);
 
         }
