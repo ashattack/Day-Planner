@@ -44,7 +44,6 @@ $(document).ready(function () {
 
         for (i = 0; i < 9; i++) {
 
-            ++;
             liveTime++;
 
             if (i >= 3) varTime = " PM";
